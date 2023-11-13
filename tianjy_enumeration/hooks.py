@@ -14,6 +14,20 @@ after_migrate = 'tianjy_enumeration.migrate.run'
 # app_include_css = "/assets/tianjy_enumeration/css/tianjy_enumeration.css"
 app_include_js = "tianjy_enumeration.bundle.js"
 
+
+# Document Events
+# ---------------
+# Hook on document methods and events
+
+doc_events = {
+	"*": {
+		"validate": "tianjy_enumeration.enumeration.validate",
+	},
+	"DocType": {
+		"validate": "tianjy_enumeration.enumeration.validate_doctype",
+	},
+}
+
 # Includes in <head>
 # ------------------
 
@@ -117,17 +131,6 @@ app_include_js = "tianjy_enumeration.bundle.js"
 #	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
-# Document Events
-# ---------------
-# Hook on document methods and events
-
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
 
 # Scheduled Tasks
 # ---------------

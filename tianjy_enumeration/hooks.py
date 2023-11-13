@@ -7,12 +7,15 @@ app_description = "天玑枚举"
 app_email = "Tianjy"
 app_license = "MIT"
 
-# Includes in <head>
-# ------------------
+
+after_migrate = 'tianjy_enumeration.migrate.run'
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/tianjy_enumeration/css/tianjy_enumeration.css"
-# app_include_js = "/assets/tianjy_enumeration/js/tianjy_enumeration.js"
+app_include_js = "tianjy_enumeration.bundle.js"
+
+# Includes in <head>
+# ------------------
 
 # include js, css files in header of web template
 # web_include_css = "/assets/tianjy_enumeration/css/tianjy_enumeration.css"

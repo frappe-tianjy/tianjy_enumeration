@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "creation": "2023-11-10 11:20:36.723661",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "label",
+  "type",
+  "parent_value",
+  "lft",
+  "rgt",
+  "is_group"
+ ],
+ "fields": [
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Label",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Type",
+   "reqd": 1,
+   "search_index": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "parent_value",
+   "fieldtype": "Link",
+   "label": "Parent",
+   "options": "Tianjy Enumeration Value",
+   "search_index": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2023-11-13 14:49:12.014044",
+ "modified_by": "Administrator",
+ "module": "Tianjy Enumeration",
+ "name": "Tianjy Enumeration Value",
+ "nsm_parent_field": "parent_value",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "tianjy_organization_filter_method": "Equal",
+ "title_field": "label",
+ "translated_doctype": 1
+}

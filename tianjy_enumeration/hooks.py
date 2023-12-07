@@ -10,6 +10,12 @@ app_license = "MIT"
 
 after_migrate = 'tianjy_enumeration.migrate.run'
 
+# Installation
+# ------------
+
+# before_install = "tianjy_enumeration.install.before_install"
+after_install = 'tianjy_enumeration.migrate.run'
+
 # include js, css files in header of desk.html
 # app_include_css = "/assets/tianjy_enumeration/css/tianjy_enumeration.css"
 app_include_js = "tianjy_enumeration.bundle.js"
@@ -76,12 +82,6 @@ doc_events = {
 #	"methods": "tianjy_enumeration.utils.jinja_methods",
 #	"filters": "tianjy_enumeration.utils.jinja_filters"
 # }
-
-# Installation
-# ------------
-
-# before_install = "tianjy_enumeration.install.before_install"
-# after_install = "tianjy_enumeration.install.after_install"
 
 # Uninstallation
 # ------------

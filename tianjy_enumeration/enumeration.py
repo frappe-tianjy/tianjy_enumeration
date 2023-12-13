@@ -14,6 +14,7 @@ def validate(self: Document, *args, **argv):
 	fields = self.meta.get('fields', {'fieldtype': 'Tianjy Enumeration'})
 	if not fields: return
 
+	labels = {field.fieldname: field.label or field.fieldname for field in fields}
 	names = [self.get(field.fieldname) for field in fields]
 	names = [value for value in names if value]
 
@@ -44,7 +45,7 @@ def validate(self: Document, *args, **argv):
 			continue
 		parent: str | None = self.get(parent_field)
 		if not parent:
-			self.set(field.fieldname, None)
+			frappe.throw(f"{label}: 请填写 {labels.get(parent_field, parent_field)} 或清空该字段")
 			continue
 		if parent_value != parent:
 			parent_item = values[parent] if parent in values else None

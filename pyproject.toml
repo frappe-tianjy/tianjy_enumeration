@@ -1,7 +1,7 @@
 [project]
 name = "tianjy_enumeration"
 authors = [
-    { name = "天玑 Tianjy", email = "a@a.com"}
+    { name = "天玑 Tianjy", email = "fengmf778@gmail.com"}
 ]
 description = "天玑枚举 Tianjy Enumeration"
 requires-python = ">=3.10"
